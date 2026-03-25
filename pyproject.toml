@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "strategy-rnd-agent"
+version = "0.1.0"
+description = "Autonomous strategy research loop with LangGraph-style orchestration"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7",
+  "typer>=0.12",
+  "optuna>=3.6",
+  "langgraph>=0.2",
+  "backtrader>=1.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["app"]
