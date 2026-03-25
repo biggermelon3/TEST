@@ -1,0 +1,1 @@
+-- See app/storage/db.py SCHEMA_SQL for authoritative schema.
